@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practca Peliculas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assents/icon.png">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navContainer">
+            <h1>Bienvenido al sitio web de películas</h1>
+        </nav>
+
+    </header>
+    <main>
+        <section id="agregarPelicula">
+            <form action="" id="peliculasForm">
+                <h2>Agregar nueva pelicula</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Ejemplo: Interestelar" required>
+
+                <label for="año">Año:</label>
+                <input type="number" id="año" name="año" placeholder="2014" required>
+
+                <label for="urlImg">URL de la foto:</label>
+                <input type="url" id="urlImg" name="urlImg" placeholder="https://url_ejemplo.png" required>
+
+                <label for="filtroGenero">Genero:</label>
+                <select id="filtroGenero" name="genero">
+                    <option value="Acción ">Acción</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Romance">Romance</option>
+                </select>
+
+                <label for="descripción">Descripción:</label><br>
+                <textarea id="descripcion" name="Descripcion" rows="5" cols="40" placeholder="Escribe aquí tu descripción..." required></textarea>
+
+                <button type="submit">Agregar pelicula</button>
+                <p id="alertMsg"></p>
+            </form>
+        </section>
+        <section id="filterFilms">
+                <label for="filtroNombre">Buscar por título:</label>
+                <input type="text" id="filtroNombre" onchange="filterFilms()" placeholder="Escribe un título...">
+
+                <!-- <label for="selectGenero">Buscar por genero:</label>
+                <select id="selectGenero">
+                    <option value="">Todos los géneros</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Romance">Romance</option>
+                </select> -->
+        </section>
+         <section id="containerRender">
+
+         </section> 
+    </main>
+    <footer>
+        <p>
+            © 2026 — Tu universo de cine, siempre en pantalla.
+        </p>
+    </footer>
+</body>
+</html>
